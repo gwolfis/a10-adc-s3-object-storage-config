@@ -1,0 +1,10 @@
+site_name: A10 ADC S3 Object Storage
+
+theme:
+  name: material
+
+nav:
+  - Introduction and Setup: "1. Introduction and Setup.md"
+  - A10 ADC Config – Unstable: "2. A10 ADC Config – Unstable.md"
+  - A10 ADC Config – Stable: "3. A10 ADC Config – Stable.md"
+  - Results, Lessons & Conclusion: "4. Results Lessons Conclusion.md"
