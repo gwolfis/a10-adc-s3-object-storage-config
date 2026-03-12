@@ -67,7 +67,7 @@ Used to generate S3 operations using `mc` (MinIO CLI).
 
 ## 3. Installing MinIO Containers
 
-## Directory Structure
+### Directory Structure
 
 On the backend host:
 
@@ -138,6 +138,8 @@ Verify:
 sudo docker ps
 ```
 
+---
+
 ## 4. Installing the MinIO Client
 
 On the client host:
@@ -146,6 +148,7 @@ curl -O https://dl.min.io/client/mc/release/linux-amd64/mc
 chmod +x mc
 sudo mv mc /usr/local/bin/
 ```
+---
 ## 5. Configure MinIO Client Access
 
 Direct access to backend nodes:
@@ -158,7 +161,7 @@ VIP access via ADC:
 ```bash
 mc alias set minio-vip http://10.108.200.201 minioadmin MinioDemo123!
 ```
-
+---
 ## 6. Create Unique Buckets Per Node
    
 ```bash
