@@ -29,8 +29,6 @@ This document demonstrates:
 4. How to observe **TCP resets**
 5. How to implement a **correct and stable ADC configuration**
 
----
-
 ## 2. Lab Architecture
 
 ### Linux Client
@@ -63,7 +61,6 @@ Each container is a **completely independent object store**.
 
 Used to generate S3 operations using `mc` (MinIO CLI).
 
----
 
 ## 3. Installing MinIO Containers
 
@@ -138,7 +135,6 @@ Verify:
 sudo docker ps
 ```
 
----
 
 ## 4. Installing the MinIO Client
 
@@ -148,7 +144,6 @@ curl -O https://dl.min.io/client/mc/release/linux-amd64/mc
 chmod +x mc
 sudo mv mc /usr/local/bin/
 ```
----
 ## 5. Configure MinIO Client Access
 
 Direct access to backend nodes:
@@ -161,7 +156,7 @@ VIP access via ADC:
 ```bash
 mc alias set minio-vip http://10.108.200.201 minioadmin MinioDemo123!
 ```
----
+
 ## 6. Create Unique Buckets Per Node
    
 ```bash
