@@ -42,6 +42,36 @@ The demo uses an vThunder A10 ADC with ACOS v6.0.8.
 
 - Distribute traffic accross three MinIO nodes.
 
+used config:
+```bash
+GJW-ADC-1(config)#sho run slb
+!Section configuration: 1517 bytes      
+!
+slb template persist source-ip persist-minio-src 
+  timeout 30 
+!
+slb template tcp tcp-minio 
+  idle-timeout 1800 
+!
+slb template tcp-proxy tcp-break-minio 
+  idle-timeout 5 
+!
+slb template tcp-proxy tp-stable-minio 
+  idle-timeout 1800 
+!
+slb server minio-host 10.109.201.200 
+  port 9000 tcp 
+  port 9100 tcp 
+  port 9200 tcp 
+!
+slb virtual-server vs-minio-break 10.108.200.201 
+  port 80 http 
+    source-nat auto 
+    service-group sg-minio 
+    template persist source-ip persist-minio-src  # kept this out to get unstable behaviour
+    template tcp-proxy tp-stable-minio 		# used template tcp-proxy tcp-break-minio to break things
+```
+
 ### Backend Host
 
 One Linux server running three standalone MinIO instances.
