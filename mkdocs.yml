@@ -5,6 +5,7 @@ theme:
 
 nav:
   - Home: index.md
+  - 1. Introduction and Lab Setup: introduction-and-setup.md
   - 2. A10 ADC Config Unstable: a10-adc-config-unstable.md
   - 3. A10 ADC Config Stable: a10-adc-config-stable.md
   - 4. Results, Lessons & Conclusion: results-lessons-conclusion.md
