@@ -135,6 +135,7 @@ Verify:
 sudo docker ps
 ```
 
+![MinIO](images/minio-in-docker.png)
 
 ## 4. Installing the MinIO Client
 

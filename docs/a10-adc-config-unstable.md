@@ -64,6 +64,7 @@ During unstable operation, resets appear:
 
 Flags [R]
 
+![TCP-RST](images/tcp-rst.png)
 
 These resets occur due to:
 
